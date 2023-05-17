@@ -9,8 +9,7 @@
 }
 
 body {
-  /* min-height: 20vh; */
-  min-height: auto;
+  min-height: 100vh;
   min-width: auto;
   background-color: #1a2a32;
   display: grid;
