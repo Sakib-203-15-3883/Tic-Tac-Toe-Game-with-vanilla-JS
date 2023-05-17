@@ -8,6 +8,23 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #1a2a32;
+  display: grid;
+  /* place-content: center;: This property aligns the content within the grid container both horizontally and vertically, placing it in the center of the grid. It is a shorthand property that combines the justify-content and align-content properties. */
+  place-content: center;
+}
+
+main {
+  width: 550px;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Top area */
+
 .clearScore {
   display: flex;
   justify-content: center;
@@ -35,17 +52,33 @@ h3 {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-body {
-  min-height: 100vh;
-  background-color: #1a2a32;
-  display: grid;
-  /* place-content: center;: This property aligns the content within the grid container both horizontally and vertically, placing it in the center of the grid. It is a shorthand property that combines the justify-content and align-content properties. */
-  place-content: center;
+/* middle area */
+
+.middle {
+  width: 100%;
 }
 
-main {
-  width: 550px;
-  height: 600px;
-  position: relative;
-  z-index: 1;
+.middle ul {
+  background-color: rgb(90, 90, 95);
+  width: 100%;
+  height: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.middle > ul li {
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: #2e4756;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
