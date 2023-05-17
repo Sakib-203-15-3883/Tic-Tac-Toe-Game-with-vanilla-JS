@@ -9,7 +9,9 @@
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 20vh; */
+  min-height: auto;
+  min-width: auto;
   background-color: #1a2a32;
   display: grid;
   /* place-content: center;: This property aligns the content within the grid container both horizontally and vertically, placing it in the center of the grid. It is a shorthand property that combines the justify-content and align-content properties. */
@@ -17,10 +19,12 @@ body {
 }
 
 main {
-  width: 550px;
-  height: 600px;
+  width: 475px;
+  height: 500px;
   position: relative;
   z-index: 1;
+  margin-top: 15%;
+  margin-bottom: -10%;
 }
 
 /* Top area */
@@ -154,4 +158,35 @@ h3 {
 
 .player-two-score {
   background-color: #3ead92;
+}
+
+/* winner area */
+.winner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  z-index: 5;
+  background-color: #1a2a3278;
+}
+
+.restart-after-win {
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: #2e4756;
+}
+
+.restart-after-win:hover {
+  cursor: pointer;
+}
+
+.winner.show-winner {
+  visibility: hidden;
 }
