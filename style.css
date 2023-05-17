@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.clearScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #2e4756;
+}
+
+.clearScore:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #1a2a32;
+}
+
+h3 {
+  color: #3cc4bf;
+  padding: 5px 20px;
+  border: none;
+  background-color: #2e4756;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #1a2a32;
+  display: grid;
+  /* place-content: center;: This property aligns the content within the grid container both horizontally and vertically, placing it in the center of the grid. It is a shorthand property that combines the justify-content and align-content properties. */
+  place-content: center;
+}
+
+main {
+  width: 550px;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
