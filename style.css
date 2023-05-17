@@ -25,6 +25,46 @@ main {
 
 /* Top area */
 
+/* The given CSS code applies styles to all immediate child elements (*) of the elements with a class of "top" (top > *) */
+
+.top > * {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+.top {
+  height: 50px;
+  padding: 0 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top > div .fa-x,
+.fa-x {
+  color: #05ece5;
+  padding-right: 5px;
+  font-size: 30px;
+}
+
+.top > div .fa-o,
+.fa-o {
+  color: #f72630;
+  font-size: 30px;
+}
+
+h3 {
+  color: #25d4cf;
+  padding: 5px 20px;
+  border: none;
+  background-color: #063f63;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 .clearScore {
   display: flex;
   justify-content: center;
@@ -33,23 +73,14 @@ main {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  background-color: #2e4756;
+
+  color: rgb(7, 7, 7);
+  background-color: #61aed4;
 }
 
 .clearScore:hover {
   cursor: pointer;
-  color: white;
-  background-color: #1a2a32;
-}
-
-h3 {
-  color: #3cc4bf;
-  padding: 5px 20px;
-  border: none;
-  background-color: #2e4756;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #54bb90;
 }
 
 /* middle area */
