@@ -82,3 +82,45 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+
+/* bottom area */
+
+.bottom {
+  width: 100%;
+  height: 50px;
+  margin: 7px 0 5px 0;
+}
+
+.bottom ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20px 0 20px;
+}
+
+.bottom ul li {
+  width: 130px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.player-one-score {
+  background-color: #2a5388;
+}
+
+.tie-score {
+  background-color: lightgrey;
+}
+
+.player-two-score {
+  background-color: #3ead92;
+}
