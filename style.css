@@ -10,7 +10,6 @@
 
 body {
   min-height: 100vh;
-  min-width: auto;
   background-color: #1a2a32;
   display: grid;
   /* place-content: center;: This property aligns the content within the grid container both horizontally and vertically, placing it in the center of the grid. It is a shorthand property that combines the justify-content and align-content properties. */
@@ -18,12 +17,10 @@ body {
 }
 
 main {
-  width: 475px;
-  height: 500px;
+  width: 550px;
+  height: 600px;
   position: relative;
   z-index: 1;
-  margin-top: 15%;
-  margin-bottom: -10%;
 }
 
 /* Top area */
