@@ -148,14 +148,17 @@ h3 {
 
 .player-one-score {
   background-color: #2a5388;
+  font-size: 20px;
 }
 
 .tie-score {
   background-color: lightgrey;
+  font-size: 20px;
 }
 
 .player-two-score {
   background-color: #3ead92;
+  font-size: 20px;
 }
 
 /* winner area */

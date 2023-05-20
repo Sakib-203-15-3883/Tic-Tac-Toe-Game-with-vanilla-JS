@@ -30,16 +30,22 @@ const h3 = document.getElementById("colorChange");
 const refresh = document.querySelector(".btn-refresh");
 const winnerDeclaration = document.getElementById("winner-declaration");
 const winnerText = document.getElementById("winner-text");
+
 const playerOnePlaceholder = document.getElementById("player-one-score");
+
 const playerTwoPlaceholder = document.getElementById("player-two-score");
+
 const tiePlaceholder = document.getElementById("tie-score");
+
 const restartBtn = document.getElementById("restart-after-win");
+
 const clearScore = document.getElementById("clear-score");
 
 // winningPatterns that stores various combinations of positions in a tic-tac-toe game that represent winning patterns.
 
 // Each element in the winningPatterns array represents a winning combination, which is an array of three numbers. These numbers correspond to the positions on a tic-tac-toe board where a player needs to have their marks (e.g., X or O) to win the game.
 
+// here, we declare a two-dimensional array for expressing winning Patterns.  two-dimensional array also known as array of arrays or matrix-like structure.
 const winningPatterns = [
   [1, 2, 3],
   [1, 5, 9],
@@ -51,6 +57,30 @@ const winningPatterns = [
   [7, 8, 9],
 ];
 
+//The some() and every() array methods in JavaScript return a Boolean value. The function checkForWinner is defined with a single parameter arr, which represents the array to be checked for winning patterns.
+
+// The includes() method returns true if the element is found in the array, and false otherwise.
+
+// The every() method returns true if all elements in the combinations array pass the test condition (i.e., all elements are present in the arr array), and false otherwise.
+
+//The some() method returns true if at least one winning pattern satisfies the condition (i.e., all elements in the pattern are present in the arr array), and false otherwise.
+
+// Finally, the checkForWinner function returns the result of the some() method, indicating whether there is a winning pattern in the provided array.
+
+function checkForWinner(arr) {
+  console.log(arr);
+  // The function uses the some() method on the winningPatterns array. The some() method tests whether at least one element in the array passes the provided test condition.
+  return winningPatterns.some((combinations) => {
+    // every() method is used on each combinations array. The every() method tests whether all elements in the array pass the provided test condition.
+    return combinations.every((element) => {
+      //includes() method checks whether an array includes a specific element. It iterates over each element and compares it to the specified element. If a match is found, the method returns true. If no match is found after iterating over all elements, it returns false. includes() method checks if the current element is present in the arr array.
+
+      return arr.includes(element);
+    });
+  });
+}
+
+//
 boxes.forEach((box) => {
   box.addEventListener(
     "click",
@@ -88,6 +118,7 @@ boxes.forEach((box) => {
         //   Adds the numerical value of the clicked element's ID to the playerOneChoices array. This keeps track of the moves made by player one.
 
         playerOneChoices.push(Number(target.id));
+        console.log(playerOneChoices);
 
         //   Changes the color of the h3 element (with id "colorChange") to "#F2B147" (a shade of yellow).
 
@@ -101,6 +132,7 @@ boxes.forEach((box) => {
         turn.classList.remove("fa-o");
         turn.classList.add("fa-x");
         playerTwoChoices.push(Number(target.id));
+        console.log(playerTwoChoices);
         h3.style.color = "#3CC4BF";
         target.style.color = "#F2B147";
       }
@@ -131,7 +163,7 @@ boxes.forEach((box) => {
         }
       }
     },
-    // It is used to specify that the event listener should only be triggered once for the specified event.he event listener is added to each box element using a forEach loop. When a box is clicked, the associated event handler function is executed. Since { once: true } is specified, the event listener is removed immediately after the first click event is triggered on that box element.
+    // It is used to specify that the event listener should only be triggered once for the specified event.the event listener is added to each box element using a forEach loop. When a box is clicked, the associated event handler function is executed. Since { once: true } is specified, the event listener is removed immediately after the first click event is triggered on that box element.
     { once: true }
   );
 });
@@ -182,29 +214,6 @@ function addTieScore() {
   sessionStorage.setItem("tieScore", tieScore);
 }
 
-//The some() and every() array methods in JavaScript return a Boolean value. The function checkForWinner is defined with a single parameter arr, which represents the array to be checked for winning patterns.
-
-// The includes() method returns true if the element is found in the array, and false otherwise.
-
-// The every() method returns true if all elements in the combinations array pass the test condition (i.e., all elements are present in the arr array), and false otherwise.
-
-//The some() method returns true if at least one winning pattern satisfies the condition (i.e., all elements in the pattern are present in the arr array), and false otherwise.
-
-// Finally, the checkForWinner function returns the result of the some() method, indicating whether there is a winning pattern in the provided array.
-
-function checkForWinner(arr) {
-  console.log(arr);
-  // The function uses the some() method on the winningPatterns array. The some() method tests whether at least one element in the array passes the provided test condition.
-  return winningPatterns.some((combinations) => {
-    // every() method is used on each combinations array. The every() method tests whether all elements in the array pass the provided test condition.
-    return combinations.every((element) => {
-      //includes() method checks whether an array includes a specific element. It iterates over each element and compares it to the specified element. If a match is found, the method returns true. If no match is found after iterating over all elements, it returns false. includes() method checks if the current element is present in the arr array.
-
-      return arr.includes(element);
-    });
-  });
-}
-
 restartBtn.addEventListener("click", restartAndClear);
 
 function restartAndClear() {
@@ -212,12 +221,8 @@ function restartAndClear() {
 }
 
 clearScore.addEventListener("click", () => {
-  console.log("smth");
   sessionStorage.clear();
   playerOnePlaceholder.innerText = 0;
   playerTwoPlaceholder.innerText = 0;
   tiePlaceholder.innerText = 0;
-  console.log(playerOneScore);
-  console.log(playerTwoScore);
-  console.log(tieScore);
 });
