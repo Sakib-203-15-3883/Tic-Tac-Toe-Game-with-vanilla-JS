@@ -142,23 +142,35 @@ boxes.forEach((box) => {
       if (playerOneChoices.length >= 3 || playerTwoChoices.length >= 3) {
         if (checkForWinner(playerOneChoices)) {
           winnerDeclaration.classList.toggle("show-winner");
+
           winnerText.innerText = "The winner is player one!";
+
           winnerText.style.color = "#F2B147";
+
           //playerOneScore++
+
           addPlayerOneScore();
+
           // line below shows us the score increment before refreshing
           playerOnePlaceholder.innerText = sessionStorage.getItem("p1Score");
         } else if (checkForWinner(playerTwoChoices)) {
           winnerDeclaration.classList.toggle("show-winner");
+
           winnerText.innerText = "The winner is player two!";
+
           winnerText.style.color = "#3CC4BF";
+
           addPlayerTwoScore();
+
           playerTwoPlaceholder.innerText = playerTwoScore;
         } else if (clickCounter === 9) {
           winnerDeclaration.classList.toggle("show-winner");
           winnerText.innerText = `It's a tie :( `;
+
           addTieScore();
+
           tiePlaceholder.innerText = tieScore;
+
           winnerText.style.color = "lightgrey";
         }
       }
@@ -182,7 +194,9 @@ if (!sessionStorage.getItem("tieScore")) {
 }
 
 playerOnePlaceholder.innerText = sessionStorage.getItem("p1Score");
+
 playerTwoPlaceholder.innerText = sessionStorage.getItem("p2Score");
+
 tiePlaceholder.innerText = sessionStorage.getItem("tieScore");
 
 // It retrieves the value of the "p1Score" key from the sessionStorage using the getItem() method:In summary, the addPlayerOneScore() function retrieves the current score for player one from the sessionStorage, increments it by 1, and stores the updated score back in the sessionStorage. This allows the player one's score to be persisted and incremented across different sessions or page reloads.
