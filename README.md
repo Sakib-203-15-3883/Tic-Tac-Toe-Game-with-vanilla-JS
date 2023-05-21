@@ -2,7 +2,9 @@
  
 This is a simple implementation of the Tic Tac Toe game in Vanilla JavaScript. It allows two players to play the game on a web browser.
 
-live link : https://tic-tac-toe-game-sakib-3883.vercel.app/
+#live link : https://tic-tac-toe-game-sakib-3883.vercel.app/
+
+#My Explanation on Youtube:  https://youtu.be/7aL42vxEAwk
 
 # Features
 
